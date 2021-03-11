@@ -1,0 +1,1 @@
+{"ast":null,"code":"const actions = {};\nexport default actions;","map":{"version":3,"sources":["D:/files/school/react/shopify/demo_1/store/actions/index.js"],"names":["actions"],"mappings":"AAAA,MAAMA,OAAO,GAAG,EAAhB;AAEA,eAAeA,OAAf","sourcesContent":["const actions = {}\r\n\r\nexport default actions"]},"metadata":{},"sourceType":"module"}

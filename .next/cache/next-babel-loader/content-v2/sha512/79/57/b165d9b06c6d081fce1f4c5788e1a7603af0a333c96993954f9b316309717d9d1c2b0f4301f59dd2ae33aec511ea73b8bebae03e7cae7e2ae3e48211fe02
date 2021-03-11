@@ -1,0 +1,1 @@
+{"ast":null,"code":"var styles = {};\nexport default styles;","map":{"version":3,"sources":["D:/files/school/react/shopify/demo_1/components/modals/CardModal/styles/index.js"],"names":["styles"],"mappings":"AAEA,IAAMA,MAAM,GAAG,EAAf;AAIA,eAAeA,MAAf","sourcesContent":["\r\n\r\nconst styles = {\r\n\r\n}\r\n\r\nexport default styles"]},"metadata":{},"sourceType":"module"}

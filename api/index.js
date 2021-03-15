@@ -1,3 +1,9 @@
-const apiRoutes = require('./routes/product')
+const apiRoutes = require('./routes')
+const middleware = require('./middleware')
 
-module.exports = apiRoutes
+const api = {
+  router: apiRoutes,
+  middleware
+}
+
+module.exports = api

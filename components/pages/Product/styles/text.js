@@ -1,8 +1,8 @@
 import styled from 'styled-components'
-import { templates } from '../../../../core'
+import { templates, utils } from '../../../../core'
 
 export const backgroundText = styled(templates._h2)`
-  color: ${props => props.theme.colors.baseColorLight};
+  color: ${props => utils.handleColor(props, 'base-light')};
   font-size: 20rem;
   transform: rotate(-90deg);
   position: absolute;
@@ -17,27 +17,27 @@ export const backgroundText = styled(templates._h2)`
 export const price = styled(templates._h3)`
   font-size: 3rem;
   text-transform: uppercase;
-  color: ${props => props.theme.colors.white};
+  color: ${props => utils.handleColor(props)};
   display: block;
 `
 
 export const dollar = styled.span`
   padding-top: 0.4rem;
   padding-right: 0.5rem;
-  color: ${props => props.theme.colors.white};
+  color: ${props => utils.handleColor(props)};
   font-size: 2rem;
   display: block;
 `
 
 export const name = styled(templates._h2)`
-  color: ${props => props.theme.colors.white};
+  color: ${props => utils.handleColor(props, 'primary')};
   font-size: 2.5rem;
   text-transform: capitalize;
   font-weight: 600;
 `
 
 export const subTitle = styled(templates._h3)`
-  color: ${props => props.theme.colors.white};
+  color: ${props => utils.handleColor(props)};
   font-size: 1.5rem;
   text-transform: capitalize;
   font-weight: 300;
@@ -45,7 +45,7 @@ export const subTitle = styled(templates._h3)`
 `
 
 export const discount = styled.span`
-  color: ${props => props.theme.colors.white};
+  color: ${props => utils.handleColor(props)};
   text-transform: capitalize;
   padding-top: 10px;
   cursor: pointer;

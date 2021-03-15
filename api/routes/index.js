@@ -1,14 +1,13 @@
+const Router = require('@koa/router')
 const discountRoutes = require('./discounts')
 const productRoutes = require('./product')
-const Router = require('@koa/router')
 
-const apiRouter = new Router()
+const apiRouter = new Router({ prefix: '/api'})
 
-apiRouter.use(
-  discountRoutes.routes(),
-  discountRoutes.allowedMethods(),
-  productRoutes.routes(),
-  productRoutes.allowedMethods()
-)
+const nestedRoutes = [discountRoutes, productRoutes]
+
+for (var router of nestedRoutes) {
+    apiRouter.use(router.routes(), router.allowedMethods())
+}
 
 module.exports = apiRouter

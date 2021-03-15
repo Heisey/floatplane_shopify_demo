@@ -17,8 +17,6 @@ const addDisountToContext = async (ctx, next) => {
       headers: headers(accessToken)
     })
 
-    // console.log('add discount ', data)
-
     if (data.price_rules) {
       const discountCodes = data.price_rules.map(discount => {
         return {

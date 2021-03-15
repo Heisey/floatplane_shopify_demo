@@ -9,11 +9,11 @@ const getAll = async (ctx) => {
     'X-Shopify-Access-Token': token
   })
 
-  const products = await axios.get(url, {
+  const { data } = await axios.get(url, {
     headers: headers(accessToken)
   })
 
-  ctx.body = products.data
+  ctx.body = data
   ctx.res.statusCode = 200
 }
 

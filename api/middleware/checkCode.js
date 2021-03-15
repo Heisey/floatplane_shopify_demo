@@ -1,17 +1,11 @@
 
 
 const checkCode = async (ctx, next) => {
-  
-  // ctx.session.guessTracker = {}
   try {
 
     const userGuessInfo = ctx.request.body
     const discountCodes = ctx.discounts
     const guessTracker = ctx.session.guessTracker
-    
-    // console.log(userGuessInfo)
-    // console.log('codes', discountCodes)
-    // console.log('session', guessTracker)
     
     const eligibleCodes = []
   
@@ -57,7 +51,6 @@ const checkCode = async (ctx, next) => {
     }
   
     eligibleCodes.forEach(el => {
-      // console.log('eligible code, ', el)
       const codeId = el.id
   
       if (parseCodesCompareAndReturnBoolean(userGuessInfo.guess, el.title)) {
@@ -113,9 +106,6 @@ const checkCode = async (ctx, next) => {
     console.log('check code err')
     console.log(err)
   }
-
-
-  // console.log('checked', checkedCodes)
 
   await next()
 }

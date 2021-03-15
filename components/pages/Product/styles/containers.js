@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { utils } from '../../../../core'
 
 export const cardContainer = styled.div`
   display: flex;
@@ -10,19 +11,19 @@ export const cardContainer = styled.div`
 `
 
 export const imageBox = styled.div`
-  background: ${props => props.theme.colors.primaryColor};
-  background: linear-gradient(210deg, ${props => props.theme.colors.quatenaryColor} 38%, ${props => props.theme.colors.primaryColor} 61%);
+  background: ${props => utils.handleColor(props, 'primary')};
+  background: linear-gradient(210deg, ${props => utils.handleColor(props, 'quatenary')} 38%, ${props => utils.handleColor(props, 'primary')} 61%);
   height: 600px;
   width: 500px;
   position: relative;
-  box-shadow: -10px 5px 15px 5px ${props => props.theme.colors.baseColorDark};
+  box-shadow: -10px 5px 15px 5px ${props => utils.handleColor(props, 'base-dark')};
 `
 
 export const cardContent = styled.div`
   height: 700px;
-  background-color: ${props => props.theme.colors.baseColorLight};
+  background-color: ${props => utils.handleColor(props, 'base-light')};
   width: 500px; 
-  box-shadow: -3px 5px 15px 5px ${props => props.theme.colors.baseColorDark};
+  box-shadow: -3px 5px 15px 5px ${props => utils.handleColor(props, 'base-dark')};
 `
 
 export const cardHeader = styled.div`

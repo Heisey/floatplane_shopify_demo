@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { utils } from '../../../../core'
 import { button } from './button'
 import { productImage } from './images'
 
@@ -6,7 +7,7 @@ export const ProductCard = styled.div`
   position: relative;
   width: 320px;
   height: 420px;
-  background-color: ${props => props.theme.colors.baseColor};
+  background-color: ${props => utils.handleColor(props, 'base')};
   border-radius: 20px;
   overflow: hidden;
 
@@ -16,7 +17,7 @@ export const ProductCard = styled.div`
     top: -50%;
     width: 100%;
     height: 100%;
-    background-color: ${props => props.theme.colors.tertiaryColor};
+    background-color: ${props => utils.handleColor(props, 'tertiary')};
     transform: skewY(345deg);
     transition: 0.5s;
   }
@@ -32,13 +33,12 @@ export const ProductCard = styled.div`
     }
 
     ${button} {
-      top: -40px;
+      top: -10px;
       opacity: 1;
     }
   }
 
   &::after {
-    /* content: ${props => props.category ? props.category : 'Category'}; */
     content: 'Category';
     position: absolute;
     bottom: 0;

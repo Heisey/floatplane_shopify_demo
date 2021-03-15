@@ -1,8 +1,8 @@
 import styled from 'styled-components'
-import { templates } from '../../../../core'
+import { templates, utils } from '../../../../core'
 
 export const Products = styled(templates._page)`
-  background-color: ${props => props.theme.colors.baseColorDark};
+  background-color: ${props => utils.handleColor(props, 'base-dark')};
   display: flex;
   flex-direction: column;
   justify-content: center;

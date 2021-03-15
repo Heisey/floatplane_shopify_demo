@@ -6,6 +6,9 @@ const defaultTheme = {
 
     white: '#fff',
 
+    error: '#bb2124',
+    success: '#22bb33',
+
     primaryColorLight: '#ffa282',
     primaryColor: '#ff652f',
     primaryColorDark: '#a6411e',

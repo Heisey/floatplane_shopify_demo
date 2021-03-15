@@ -14,18 +14,15 @@ const Discount = (props) => {
   const [hasWon, hasWonHandler] = useState(false)
   const [guessMessage, guessMessageHandler] = useState('')
 
-  // console.log(product)
-
   const formik = useFormik({
     initialValues: {
       guess: '',
     },
     onSubmit: async values => {
       try {
-        
         const { data } = await axios({
           method: 'post',
-          url: '/discounts',
+          url: '/api/discounts',
           data: {
             guess: values.guess,
             productId: product.id,
@@ -64,10 +61,6 @@ const Discount = (props) => {
         window.setTimeout(() => {
           toggleToastHandler(false)
         }, 4900)
-        console.log(data)
-
-        
-        
       } catch (err) {
         console.log('on submit error')
         console.log(err.message)
@@ -104,6 +97,7 @@ const Discount = (props) => {
             />
             <styles.buttonContainer>
               <Buttons.Pill 
+                color='primary'
                 type='submit'
                 text='guess'
               />

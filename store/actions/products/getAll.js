@@ -1,12 +1,10 @@
-
+import axios from 'axios'
 
 const getAll = async (dispatch) => {
   dispatch({ type: 'SHOPIFY_PRODUCTS_GET_ALL_START' })
 
   try {
-    const response = await fetch('/api/products')
-
-    const data = await response.json()
+    const { data } = await axios('/api/products')
 
     dispatch({ type: 'SHOPIFY_PRODUCTS_GET_ALL_SUCCESS', payload: data})
   } catch (err) {

@@ -1,7 +1,7 @@
-const getAll = require('./getAll')
+const applyDiscount = require('./applyDiscount')
 
 const controller = {
-  getAll
+  applyDiscount
 }
 
 module.exports = controller

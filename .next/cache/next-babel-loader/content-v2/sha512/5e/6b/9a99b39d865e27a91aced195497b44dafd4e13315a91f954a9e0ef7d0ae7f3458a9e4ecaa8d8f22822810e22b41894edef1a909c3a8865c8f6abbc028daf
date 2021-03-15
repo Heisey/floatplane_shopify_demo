@@ -1,1 +1,0 @@
-{"ast":null,"code":"export { default as svgs } from './svgs';","map":{"version":3,"sources":["D:/files/school/react/shopify/demo_1/assets/index.js"],"names":["default","svgs"],"mappings":"AACA,SAASA,OAAO,IAAIC,IAApB,QAAgC,QAAhC","sourcesContent":["\r\nexport { default as svgs } from './svgs'"]},"metadata":{},"sourceType":"module"}

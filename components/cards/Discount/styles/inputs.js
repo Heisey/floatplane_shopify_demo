@@ -1,9 +1,10 @@
 import styled from 'styled-components'
+import { utils } from '../../../../core'
 
 export const input = styled.input`
-  color: ${props => props.theme.colors.primaryColor};
+  color: ${props => utils.handleColor(props, 'primary')};
   background: transparent;
-  border: 4px solid ${props => props.theme.colors.primaryColor};
+  border: 4px solid ${props => utils.handleColor(props, 'primary')};
   padding: 20px;
   margin: 0 auto;
   display: block;

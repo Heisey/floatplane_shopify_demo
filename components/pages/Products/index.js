@@ -10,7 +10,7 @@ import styles from './styles'
 const Products = (props) => {
 
   const products = useSelector(state => state.products.data)
-  console.log(products)
+  
   const dispatch = useDispatch()
   
   useEffect(() => {

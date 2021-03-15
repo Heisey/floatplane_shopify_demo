@@ -2,8 +2,9 @@
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { Buttons, Cards, Modals } from '../../'
+import { Cards, Modals } from '../../'
 import { actions } from '../../../store'
+import content from './content'
 import styles from './styles'
 
 const ProductPage = () => {
@@ -13,7 +14,6 @@ const ProductPage = () => {
   const [showModal, showModalHandler] = useState(false)
   const product = useSelector(state => state.products.data)
   const dispatch = useDispatch()
-  
 
   useEffect(() => {
     actions.productActions.getOne(dispatch, id)
@@ -44,29 +44,13 @@ const ProductPage = () => {
       }
     }
     return (
-      <styles.Card>
-        <styles.imageBox>
-          <styles.productImage src={img} />
-        </styles.imageBox>
-        <styles.cardContent>
-          <styles.cardHeader>
-            <styles.priceContainer>
-              <styles.dollar>$</styles.dollar>
-              <styles.price>{price}</styles.price>
-            </styles.priceContainer>
-          </styles.cardHeader>
-          <styles.cardBody>
-            <styles.name>{title}</styles.name>
-            <styles.subTitle>{subTitle}</styles.subTitle>
-          </styles.cardBody>
-          <styles.cardFooter>
-            <Buttons.Pill text='purchase' />
-            <styles.discount
-              onClick={handleShow}
-            >apply discount</styles.discount>
-          </styles.cardFooter>
-        </styles.cardContent>
-      </styles.Card>
+      <content.Card 
+        img={img}
+        price={price}
+        title={title}
+        subTitle={subTitle}
+        onClick={handleShow}
+      />
     )
   }
 

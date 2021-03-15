@@ -1,8 +1,8 @@
 import styled from 'styled-components'
-import { templates } from '../../../../core'
+import { templates, utils } from '../../../../core'
 
 export const discountPrice = styled(templates._h3)`
-  color: ${props => props.theme.colors.white};
+  color: ${props => utils.handleColor(props)};
   font-size: 50px;
   font-weight: 600;
   letter-spacing: 2px;

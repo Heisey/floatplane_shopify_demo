@@ -1,5 +1,5 @@
 
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Cards } from '../../'
 import { utils } from '../../../core'
@@ -7,7 +7,7 @@ import { actions } from '../../../store'
 
 import styles from './styles'
 
-const Products = (props) => {
+const Products = () => {
 
   const products = useSelector(state => state.products.data)
   

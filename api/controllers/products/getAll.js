@@ -1,16 +1,14 @@
 const axios = require('axios')
+const lib = require('../../lib')
 
 const getAll = async (ctx) => {
   const { shop, accessToken } = ctx.session
   const url = `https://${shop}/admin/api/2021-01/products.json`
 
-  const headers = (token) => ({
-    'Content-Type': 'application/json',
-    'X-Shopify-Access-Token': token
-  })
+  const headers = lib.generateShopifyHeaders(accessToken)
 
   const { data } = await axios.get(url, {
-    headers: headers(accessToken)
+    headers
   })
 
   ctx.body = data

@@ -13,6 +13,7 @@ const ProductPage = () => {
   
   const [showModal, showModalHandler] = useState(false)
   const product = useSelector(state => state.products.data)
+  console.log(product)
   const dispatch = useDispatch()
 
   useEffect(() => {

@@ -7,3 +7,5 @@ const lib = {
   generateShopifyHeaders,
   handleDiscountAmount
 }
+
+module.exports = lib
